@@ -1,0 +1,62 @@
+# Reference Projects Configuration for FABulous Testing
+# This file defines reference projects to test against FABulous
+
+reference_projects:
+  - name: "run_legacy_1.3_verilog_demo"
+    path: "./legacy/clean/demo_verilog/"
+    language: "verilog"
+    test_mode: "run"
+    description: "Run legacy FABulous 1.3 Verilog demo project for error checking"
+    expected_outputs:
+      - "Fabric/eFPGA_top.v"
+      - "Fabric/eFPGA.v"
+      - "Tile/LUT4AB/LUT4AB.v"
+      - "Tile/LUT4AB/LUT4AB_switch_matrix.csv"
+      - "Tile/LUT4AB/LUT4AB_switchmatrix.v"
+      - "Tile/LUT4AB/LUT4AB_ConfigMem.csv"
+      - "Tile/LUT4AB/LUT4AB_ConfigMem.v"
+
+  - name: "run_legacy_1.3_vhdl_demo"
+    path: "./legacy/clean/demo_vhdl/"
+    language: "vhdl"
+    test_mode: "run"
+    description: "Run legacy FABulous 1.3 VHDL demo project for error checking"
+    expected_outputs:
+      - "Fabric/eFPGA_top.v"
+      - "Fabric/eFPGA.v"
+      - "Tile/LUT4AB/LUT4AB.v"
+      - "Tile/LUT4AB/LUT4AB_switch_matrix.csv"
+      - "Tile/LUT4AB/LUT4AB_switchmatrix.v"
+      - "Tile/LUT4AB/LUT4AB_ConfigMem.csv"
+      - "Tile/LUT4AB/LUT4AB_ConfigMem.v"
+
+  - name: "diff_legacy_1.3_verilog_reference_demo"
+    path: "./legacy/reference/demo_verilog/"
+    language: "verilog"
+    test_mode: "diff"
+    description: "Run and diff legacy FABulous v1.3 project for backward compatibility testing"
+
+  - name: "diff_legacy_1.3_vhdl_reference_demo"
+    path: "./legacy/reference/demo_vhdl/"
+    language: "vhdl"
+    test_mode: "diff"
+    description: "Run and diff legacy FABulous v1.3 project for backward compatibility testing"
+
+# Configuration Notes:
+#
+# name: Unique identifier for the project
+# path: Absolute or home-relative path to the project directory
+# language: "verilog" or "vhdl"
+# test_mode:
+#   - "run": Execute FABulous commands and check for errors only
+#   - "diff": Execute commands and compare RTL/bitstream against golden references
+# description: Human-readable description of the project
+# expected_outputs: List of files that should be generated (optional)
+# skip_reason: If present, skip this project with the given reason (optional)
+# include_patterns: List of glob patterns for files to include in diff comparison (optional)
+# exclude_patterns: List of glob patterns for files to exclude from diff comparison (optional)
+#
+# To use this config:
+# 1. Update the 'path' fields with actual project locations
+# 2. Remove or comment out 'skip_reason' lines for projects you want to test
+# 3. Run: pytest tests/reference_projects_test.py

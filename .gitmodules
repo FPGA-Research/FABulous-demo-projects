@@ -1,0 +1,3 @@
+[submodule "legacy/FABulous_legacy_1.3"]
+	path = legacy/FABulous_legacy_1.3
+	url = git@github.com:FPGA-Research/FABulous.git
