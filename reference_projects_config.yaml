@@ -32,6 +32,7 @@ reference_projects:
 
   # We can only check for bitstream spec, pips.txt. and bel.txt and so on here, since the RTL generation changed a lot
   # but should be still logically equal.
+  # This also includes the geometry generation.
   - name: "diff_legacy_1.3_verilog_reference_demo"
     path: "./legacy/reference/demo_verilog/"
     language: "verilog"
@@ -40,11 +41,10 @@ reference_projects:
     include_patterns:
      - "*.csv"
      - "*.txt"
-    exclude_patterns:
-     - "eFPGA_geometry.csv"
 
   # We can only check for bitstream spec, pips.txt. and bel.txt and so on here, since the RTL generation changed a lot
   # but should be still logically equal.
+  # This also includes the geometry generation.
   - name: "diff_legacy_1.3_vhdl_reference_demo"
     path: "./legacy/reference/demo_vhdl/"
     language: "vhdl"
@@ -53,6 +53,4 @@ reference_projects:
     include_patterns:
      - "*.csv"
      - "*.txt"
-    exclude_patterns:
-     - "eFPGA_geometry.csv"
 
