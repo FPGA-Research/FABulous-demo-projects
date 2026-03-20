@@ -56,3 +56,45 @@ reference_projects:
     exclude_patterns:
      - "eFPGA_geometry.csv"
 
+  - name: "run_user_flow_verilog"
+    path: "./legacy/sim/demo_verilog/"
+    language: "verilog"
+    test_mode: "run"
+    description: "Full user flow: fabric gen + synthesis + P&R + bitstream + simulation (Verilog)"
+    expected_outputs:
+      - "Fabric/eFPGA_top.v"
+      - "Fabric/eFPGA.v"
+      - "Tile/LUT4AB/LUT4AB.v"
+      - "Tile/LUT4AB/LUT4AB_switch_matrix.csv"
+      - "Tile/LUT4AB/LUT4AB_switch_matrix.v"
+      - "Tile/LUT4AB/LUT4AB_ConfigMem.csv"
+      - "Tile/LUT4AB/LUT4AB_ConfigMem.v"
+    post_fab_commands:
+      - cmd: "make sim"
+        cwd: "Test/"
+        required_tools:
+          - "yosys"
+          - "nextpnr-generic"
+          - "iverilog"
+
+  - name: "run_user_flow_vhdl"
+    path: "./legacy/sim/demo_vhdl/"
+    language: "vhdl"
+    test_mode: "run"
+    description: "Full user flow: fabric gen + synthesis + P&R + bitstream + VHDL simulation"
+    expected_outputs:
+      - "Fabric/eFPGA_top.vhdl"
+      - "Fabric/eFPGA.vhdl"
+      - "Tile/LUT4AB/LUT4AB.vhdl"
+      - "Tile/LUT4AB/LUT4AB_switch_matrix.csv"
+      - "Tile/LUT4AB/LUT4AB_switch_matrix.vhdl"
+      - "Tile/LUT4AB/LUT4AB_ConfigMem.csv"
+      - "Tile/LUT4AB/LUT4AB_ConfigMem.vhdl"
+    post_fab_commands:
+      - cmd: "make sim"
+        cwd: "Test/"
+        required_tools:
+          - "yosys"
+          - "nextpnr-generic"
+          - "ghdl"
+

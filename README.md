@@ -13,4 +13,31 @@ If you are contributing a demo, please make sure to add the following informatio
 
 - Make sure to add a demo directory with a specific name for the demo.
 - If not already present, add a .env file for configuring the demo in the .FABulous folder
-- Add the following information about the project in the demo.yaml file of this repo.
+- Add the following information about the project in the `reference_projects_config.yaml` of this repo.
+
+## Testing configuration (`reference_projects_config.yaml`)
+
+Each project entry supports the following fields:
+
+- `name`: Unique identifier for the project.
+- `path`: Path to the project directory (relative to this repo root).
+- `language`: `"verilog"` or `"vhdl"`.
+- `test_mode`: `"run"` (error checking only) or `"diff"` (regression comparison).
+- `description`: Brief description of the project.
+- `expected_outputs` *(optional)*: List of files that must exist after the run.
+- `include_patterns` *(optional, diff mode)*: Glob patterns for files to compare.
+- `exclude_patterns` *(optional, diff mode)*: Glob patterns for files to exclude.
+- `fab_commands` *(optional)*: FABulous commands to run. Defaults to `["load_fabric", "run_FABulous_fabric"]`.
+- `pre_fab_commands` *(optional)*: List of shell command dicts to run before FABulous commands. Each dict has:
+  - `cmd`: the shell command to execute
+  - `cwd` *(optional)*: subdirectory relative to the project root
+  - `required_tools` *(optional)*: list of tools that must be on PATH; the command is skipped if any are missing
+- `post_fab_commands` *(optional)*: List of shell command dicts to run after FABulous commands (e.g. synthesis, P&R, simulation). Each dict has:
+  - `cmd`: the shell command to execute
+  - `cwd` *(optional)*: subdirectory relative to the project root
+  - `required_tools` *(optional)*: list of tools that must be on PATH; the command is skipped if any are missing
+- `cleanup_commands` *(optional)*: List of shell command dicts that always run last, even if earlier steps fail (via try/finally). Each dict has:
+  - `cmd`: the shell command to execute
+  - `cwd` *(optional)*: subdirectory relative to the project root
+  - `required_tools` *(optional)*: list of tools that must be on PATH; the command is skipped if any are missing
+- `skip_reason` *(optional)*: If set, the test is skipped with this message.
