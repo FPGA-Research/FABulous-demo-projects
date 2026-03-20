@@ -3,12 +3,12 @@ FAB_PROJ_ROOT=..
 BUILD_DIR=build
 YOSYS?=$(or $(FAB_YOSYS_PATH),yosys)
 NEXTPNR?=$(or $(FAB_NEXTPNR_PATH),nextpnr-generic)
-DESIGN=counter
-TESTBENCH=fab_tb
-TESTBENCH_FILE=fabulous_tb.vhdl
+DESIGN=sequential_16bit_en
+TESTBENCH=sequential_16bit_en_tb
+TESTBENCH_FILE=${TESTBENCH}.vhdl
 TOP_WRAPPER=top_wrapper
 
-USER_DESIGN_DIR=test_design
+USER_DESIGN_DIR=../user_design/
 USER_DESIGN_VHDL=${USER_DESIGN_DIR}/${DESIGN}.vhdl
 TOP_WRAPPER_VERILOG=${USER_DESIGN_DIR}/${TOP_WRAPPER}.v
 
@@ -30,7 +30,7 @@ sim: build_test_design run_simulation clean
 build_test_design: run_yosys run_nextpnr run_bitgen
 
 run_yosys: mkdir_build
-	${YOSYS} -m ghdl -p "ghdl ${USER_DESIGN_VHDL} -e top; read_verilog ${TOP_WRAPPER_VERILOG}; synth_fabulous -top ${TOP_WRAPPER} -json ${BUILD_DIR}/${DESIGN}.json ${CUSTOM_PRIMS};"
+	${YOSYS} -m ghdl -p "ghdl ${USER_DESIGN_VHDL} -e ${DESIGN}; read_verilog ${TOP_WRAPPER_VERILOG}; synth_fabulous -top ${TOP_WRAPPER} -json ${BUILD_DIR}/${DESIGN}.json ${CUSTOM_PRIMS};"
 
 run_nextpnr: mkdir_build
 	FAB_ROOT=${FAB_PROJ_ROOT} ${NEXTPNR} --uarch fabulous --json ${BUILD_DIR}/${DESIGN}.json -o fasm=${BUILD_DIR}/${DESIGN}.fasm
@@ -58,7 +58,6 @@ run_simulation: mkdir_build
 	              ${FAB_TILE_FOLDER}/RAM_IO/RAM_IO_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/RAM_IO/InPass4_frame_config.vhdl \
 	              ${FAB_TILE_FOLDER}/RAM_IO/OutPass4_frame_config.vhdl \
-	              ${FAB_TILE_FOLDER}/RAM_IO/Config_access.vhdl \
 	              ${FAB_TILE_FOLDER}/RAM_IO/RAM_IO.vhdl \
 	              ${FAB_TILE_FOLDER}/RegFile/RegFile_switch_matrix.vhdl \
 	              ${FAB_TILE_FOLDER}/RegFile/RegFile_ConfigMem.vhdl \
@@ -80,43 +79,32 @@ run_simulation: mkdir_build
 	              ${FAB_TILE_FOLDER}/DSP/DSP.vhdl && \
 	${GHDL} -a ${GHDL_FLAGS} \
 	              ${FAB_TILE_FOLDER}/N_term_DSP/N_term_DSP_switch_matrix.vhdl \
-	              ${FAB_TILE_FOLDER}/N_term_DSP/N_term_DSP_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/N_term_DSP/N_term_DSP.vhdl \
 	              ${FAB_TILE_FOLDER}/S_term_DSP/S_term_DSP_switch_matrix.vhdl \
-	              ${FAB_TILE_FOLDER}/S_term_DSP/S_term_DSP_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/S_term_DSP/S_term_DSP.vhdl \
 	              ${FAB_TILE_FOLDER}/N_term_RAM_IO/N_term_RAM_IO_switch_matrix.vhdl \
-	              ${FAB_TILE_FOLDER}/N_term_RAM_IO/N_term_RAM_IO_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/N_term_RAM_IO/N_term_RAM_IO.vhdl \
 	              ${FAB_TILE_FOLDER}/S_term_RAM_IO/S_term_RAM_IO_switch_matrix.vhdl \
-	              ${FAB_TILE_FOLDER}/S_term_RAM_IO/S_term_RAM_IO_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/S_term_RAM_IO/S_term_RAM_IO.vhdl \
 	              ${FAB_TILE_FOLDER}/N_term_single/N_term_single_switch_matrix.vhdl \
-	              ${FAB_TILE_FOLDER}/N_term_single/N_term_single_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/N_term_single/N_term_single.vhdl \
 	              ${FAB_TILE_FOLDER}/S_term_single/S_term_single_switch_matrix.vhdl \
-	              ${FAB_TILE_FOLDER}/S_term_single/S_term_single_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/S_term_single/S_term_single.vhdl \
 	              ${FAB_TILE_FOLDER}/N_term_single2/N_term_single2_switch_matrix.vhdl \
-	              ${FAB_TILE_FOLDER}/N_term_single2/N_term_single2_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/N_term_single2/N_term_single2.vhdl \
 	              ${FAB_TILE_FOLDER}/S_term_single2/S_term_single2_switch_matrix.vhdl \
-	              ${FAB_TILE_FOLDER}/S_term_single2/S_term_single2_ConfigMem.vhdl \
 	              ${FAB_TILE_FOLDER}/S_term_single2/S_term_single2.vhdl && \
 	${GHDL} -a ${GHDL_FLAGS} \
-	              ${FAB_FABRIC_FOLDER}/eFPGA_top.vhdl \
 	              ${FAB_FABRIC_FOLDER}/config_UART.vhdl \
 	              ${FAB_FABRIC_FOLDER}/bitbang.vhdl \
-	              ${FAB_FABRIC_FOLDER}/eFPGA_Config.vhdl \
 	              ${FAB_FABRIC_FOLDER}/ConfigFSM.vhdl \
+	              ${FAB_FABRIC_FOLDER}/eFPGA_Config.vhdl \
 	              ${FAB_FABRIC_FOLDER}/Frame_Data_Reg.vhdl \
 	              ${FAB_FABRIC_FOLDER}/Frame_Select.vhdl \
 	              ${FAB_FABRIC_FOLDER}/BlockRAM_1KB.vhdl \
 	              ${FAB_FABRIC_FOLDER}/eFPGA.vhdl \
-	              ${USER_DESIGN_VHDL} \
+	              ${FAB_FABRIC_FOLDER}/eFPGA_top.vhdl \
+	              ${USER_DESIGN_DIR}/${DESIGN}.vhdl \
 	              ${TESTBENCH_FILE} && \
 	${GHDL} -e ${GHDL_FLAGS} -fexplicit ${TESTBENCH} && \
-	${GHDL} -r ${GHDL_FLAGS} ${TESTBENCH} \
-	              --assert-level=error --ieee-asserts=disable \
-	              --stop-time=250000ns \
-	              --fst=${BUILD_DIR}/${TESTBENCH}.fst
+	${GHDL} -r ${GHDL_FLAGS} ${TESTBENCH} --stats --ieee-asserts=disable --fst=${BUILD_DIR}/${TESTBENCH}.fst
