@@ -8,5 +8,7 @@ that is added as git submodule in this folder.
 
 The `clean` folder contains the original demo projects, without any processing.
 
+The `sim` folder contains lecture demo projects, to let the simulator run through the demo projects, to check for any errors.
+
 The demo projects in the `reference` folder are fully processed demo fabrics, with
 the tagged FABulous 1.3 version. They will be used as reference for testing FABulous.
