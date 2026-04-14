@@ -7,6 +7,38 @@ of FABulous.
 
 The demos are also used for testing FABulous.
 
+## Running tests locally
+
+A `Makefile` is provided to run the reference tests against this repo without any manual setup.
+It clones FABulous automatically on first use.
+
+```bash
+# Run all reference tests
+make test
+
+# Verbose output with a filter
+make test ARGS="-v -k run_legacy_1.3_verilog_demo"
+
+# Pull the latest FABulous before running
+make update && make test
+
+# Test against a specific branch (clones that branch into the cache)
+make clean && make test FAB_BRANCH=my-feature-branch
+
+# Use a local FABulous checkout (picks up your uncommitted changes)
+make test FAB_REPO=~/path/to/FABulous
+
+# Remove the cached FABulous clone
+make clean
+```
+
+**How it works:**
+- On first run, FABulous is shallow-cloned from GitHub into `.fab_test_cache/FABulous/`.
+- `uv` creates a virtual environment and installs FABulous with all test dependencies automatically.
+- `--projects-dir` is set to this repo, so tests always run against your local working tree.
+- `FAB_BRANCH` selects the branch to clone; `make clean` is needed first to discard an existing cache.
+- `FAB_REPO` overrides the cache entirely with a local checkout — useful when developing FABulous and this repo simultaneously.
+
 ## Contributing a demo
 
 If you are contributing a demo, please make sure to add the following information:
