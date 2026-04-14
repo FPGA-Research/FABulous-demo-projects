@@ -67,7 +67,7 @@ module LUT4c_frame_config_dffesr (I0, I1, I2, I3, O, Ci, Co, SR, EN, UserCLK, Co
 //CONFout <= c_I0mux;
 
 	//assign I0mux = c_I0mux ? Ci : I0;
-	my_mux2 my_mux2_I0mux(
+	cus_mux21 cus_mux21_I0mux(
 	.A0(I0),
 	.A1(Ci),
 	.S(c_I0mux),
@@ -102,7 +102,7 @@ module LUT4c_frame_config_dffesr (I0, I1, I2, I3, O, Ci, Co, SR, EN, UserCLK, Co
 	.S4(LUT_index[3]),
 	.O(LUT_out)
 	);*/
-	cus_mux161_buf inst_cus_mux161_buf(
+	cus_mux161 inst_cus_mux161(
 	.A0(LUT_values[0]),
 	.A1(LUT_values[1]),
 	.A2(LUT_values[2]),
@@ -131,7 +131,7 @@ module LUT4c_frame_config_dffesr (I0, I1, I2, I3, O, Ci, Co, SR, EN, UserCLK, Co
 	);
 
 	//assign O = c_out_mux ? LUT_flop : LUT_out;
-	my_mux2 my_mux2_O(
+	cus_mux21 cus_mux21_O(
 	.A0(LUT_out),
 	.A1(LUT_flop),
 	.S(c_out_mux),
