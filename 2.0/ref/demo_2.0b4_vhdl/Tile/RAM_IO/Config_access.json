@@ -1,0 +1,82 @@
+{
+  "creator": "Yosys 0.63+190 (git sha1 37ca545b6, clang++ 18.1.8 -fPIC -O3)",
+  "modules": {
+    "Config_access": {
+      "attributes": {
+        "FABulous": "TRUE",
+        "BelMap": "TRUE",
+        "C_bit0": 0,
+        "C_bit1": 1,
+        "C_bit2": 2,
+        "C_bit3": 3,
+        "top": 1,
+        "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/Config_access.v:1.218-19.10"
+      },
+      "ports": {
+        "C": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "EXTERNAL": "TRUE",
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/Config_access.v:2.39-2.40"
+          }
+        },
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "GLOBAL": "TRUE",
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/Config_access.v:3.37-3.47"
+          }
+        },
+        "n1": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/Config_access.v:4.8-4.10"
+          }
+        },
+        "n2": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/Config_access.v:5.8-5.10"
+          }
+        },
+        "n3": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/Config_access.v:6.8-6.10"
+          }
+        },
+        "n4": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/Config_access.v:7.8-7.10"
+          }
+        },
+        "n5": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/Config_access.v:8.14-8.16"
+          }
+        }
+      }
+    }
+  }
+}

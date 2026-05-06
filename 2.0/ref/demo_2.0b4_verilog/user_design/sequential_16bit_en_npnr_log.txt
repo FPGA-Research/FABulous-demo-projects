@@ -1,0 +1,226 @@
+Info: Detected FABulous 2.0 format project.
+
+Info: No PCF file specified, skipping constraints application.
+Info: Checksum: 0x62e14ca0
+
+Info: Device utilisation:
+Info: 	         FABULOUS_LC:      32/    672     4%
+Info: 	IO_1_bidirectional_frame_config_pass:      28/     28   100%
+Info: 	InPass4_frame_config_mux:      56/     56   100%
+Info: 	OutPass4_frame_config_mux:      98/     98   100%
+Info: 	        RegFile_32x4:       0/     14     0%
+Info: 	              MULADD:       0/      7     0%
+Info: 	        Global_Clock:       1/      1   100%
+Info: 	       FABULOUS_MUX2:       0/    336     0%
+Info: 	       FABULOUS_MUX4:       0/    168     0%
+Info: 	       FABULOUS_MUX8:       0/     84     0%
+Info: 	       Config_access:       0/     42     0%
+
+Info: Placed 182 cells based on constraints.
+Info: Creating initial analytic placement for 35 cells, random placement wirelen = 450.
+Info:     at initial placer iter 0, wirelen = 35
+Info:     at initial placer iter 1, wirelen = 33
+Info:     at initial placer iter 2, wirelen = 35
+Info:     at initial placer iter 3, wirelen = 33
+Info: Running main analytical placer, max placement attempts per cell = 10000.
+Info:     at iteration #1, type _CONST0_DRV: wirelen solved = 33, spread = 33, legal = 33; time = 0.00s
+Info:     at iteration #1, type _CONST1_DRV: wirelen solved = 33, spread = 33, legal = 33; time = 0.00s
+Info:     at iteration #1, type Global_Clock: wirelen solved = 33, spread = 33, legal = 33; time = 0.00s
+Info:     at iteration #1, type FABULOUS_LC: wirelen solved = 35, spread = 49, legal = 84; time = 0.00s
+Info:     at iteration #1, type ALL: wirelen solved = 33, spread = 37, legal = 84; time = 0.00s
+Info:     at iteration #2, type _CONST0_DRV: wirelen solved = 84, spread = 84, legal = 84; time = 0.00s
+Info:     at iteration #2, type _CONST1_DRV: wirelen solved = 84, spread = 84, legal = 84; time = 0.00s
+Info:     at iteration #2, type Global_Clock: wirelen solved = 84, spread = 84, legal = 84; time = 0.00s
+Info:     at iteration #2, type FABULOUS_LC: wirelen solved = 36, spread = 49, legal = 84; time = 0.00s
+Info:     at iteration #2, type ALL: wirelen solved = 35, spread = 49, legal = 99; time = 0.00s
+Info:     at iteration #3, type _CONST0_DRV: wirelen solved = 99, spread = 99, legal = 99; time = 0.00s
+Info:     at iteration #3, type _CONST1_DRV: wirelen solved = 99, spread = 99, legal = 99; time = 0.00s
+Info:     at iteration #3, type Global_Clock: wirelen solved = 99, spread = 99, legal = 99; time = 0.00s
+Info:     at iteration #3, type FABULOUS_LC: wirelen solved = 33, spread = 50, legal = 98; time = 0.00s
+Info:     at iteration #3, type ALL: wirelen solved = 30, spread = 43, legal = 74; time = 0.00s
+Info:     at iteration #4, type _CONST0_DRV: wirelen solved = 74, spread = 74, legal = 74; time = 0.00s
+Info:     at iteration #4, type _CONST1_DRV: wirelen solved = 74, spread = 74, legal = 74; time = 0.00s
+Info:     at iteration #4, type Global_Clock: wirelen solved = 74, spread = 74, legal = 74; time = 0.00s
+Info:     at iteration #4, type FABULOUS_LC: wirelen solved = 32, spread = 44, legal = 84; time = 0.00s
+Info:     at iteration #4, type ALL: wirelen solved = 32, spread = 44, legal = 91; time = 0.00s
+Info:     at iteration #5, type _CONST0_DRV: wirelen solved = 91, spread = 91, legal = 91; time = 0.00s
+Info:     at iteration #5, type _CONST1_DRV: wirelen solved = 91, spread = 91, legal = 91; time = 0.00s
+Info:     at iteration #5, type Global_Clock: wirelen solved = 91, spread = 91, legal = 91; time = 0.00s
+Info:     at iteration #5, type FABULOUS_LC: wirelen solved = 34, spread = 47, legal = 91; time = 0.00s
+Info:     at iteration #5, type ALL: wirelen solved = 34, spread = 47, legal = 89; time = 0.00s
+Info:     at iteration #6, type _CONST0_DRV: wirelen solved = 89, spread = 89, legal = 89; time = 0.00s
+Info:     at iteration #6, type _CONST1_DRV: wirelen solved = 89, spread = 89, legal = 89; time = 0.00s
+Info:     at iteration #6, type Global_Clock: wirelen solved = 89, spread = 89, legal = 89; time = 0.00s
+Info:     at iteration #6, type FABULOUS_LC: wirelen solved = 33, spread = 50, legal = 88; time = 0.00s
+Info:     at iteration #6, type ALL: wirelen solved = 34, spread = 44, legal = 98; time = 0.00s
+Info:     at iteration #7, type _CONST0_DRV: wirelen solved = 98, spread = 98, legal = 98; time = 0.00s
+Info:     at iteration #7, type _CONST1_DRV: wirelen solved = 98, spread = 98, legal = 98; time = 0.00s
+Info:     at iteration #7, type Global_Clock: wirelen solved = 98, spread = 98, legal = 98; time = 0.00s
+Info:     at iteration #7, type FABULOUS_LC: wirelen solved = 34, spread = 48, legal = 100; time = 0.00s
+Info:     at iteration #7, type ALL: wirelen solved = 34, spread = 49, legal = 94; time = 0.00s
+Info:     at iteration #8, type _CONST0_DRV: wirelen solved = 94, spread = 94, legal = 94; time = 0.00s
+Info:     at iteration #8, type _CONST1_DRV: wirelen solved = 94, spread = 94, legal = 94; time = 0.00s
+Info:     at iteration #8, type Global_Clock: wirelen solved = 94, spread = 94, legal = 94; time = 0.00s
+Info:     at iteration #8, type FABULOUS_LC: wirelen solved = 37, spread = 48, legal = 91; time = 0.00s
+Info:     at iteration #8, type ALL: wirelen solved = 37, spread = 48, legal = 88; time = 0.00s
+Info: HeAP Placer Time: 0.01s
+Info:   of which solving equations: 0.01s
+Info:   of which spreading cells: 0.00s
+Info:   of which strict legalisation: 0.00s
+Info:      FABULOUS_LC 0.000s
+Info:      Global_Clock 0.000s
+Info:      _CONST1_DRV 0.000s
+Info:      _CONST0_DRV 0.000s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 88, wirelen = 74
+iter #1: temp = 0.000000, timing cost = 81, wirelen = 70, dia = 3, Ra = 0.05 
+iter #2: temp = 0.000000, timing cost = 80, wirelen = 70, dia = 3, Ra = 0.03 
+Info:   at iteration #3: temp = 0.000000, timing cost = 68, wirelen = 70 
+Info: SA placement time 0.00s
+
+Info: Max frequency for clock 'clk': 16.53 MHz (PASS at 12.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 22833,  25534) |*** 
+Info: [ 25534,  28235) | 
+Info: [ 28235,  30936) |* 
+Info: [ 30936,  33637) | 
+Info: [ 33637,  36338) |* 
+Info: [ 36338,  39039) | 
+Info: [ 39039,  41740) |* 
+Info: [ 41740,  44441) | 
+Info: [ 44441,  47142) |** 
+Info: [ 47142,  49843) | 
+Info: [ 49843,  52544) | 
+Info: [ 52544,  55245) |***** 
+Info: [ 55245,  57946) | 
+Info: [ 57946,  60647) |* 
+Info: [ 60647,  63348) | 
+Info: [ 63348,  66049) |* 
+Info: [ 66049,  68750) | 
+Info: [ 68750,  71451) |* 
+Info: [ 71451,  74152) | 
+Info: [ 74152,  76853) |************** 
+Info: Checksum: 0x4700ffec
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 180 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:        281 |       80        201 |   80   201 |         0|       0.02       0.02|
+Info: Routing complete.
+Info: Router1 time 0.02s
+Info: Checksum: 0xe96cb9c6
+
+Info: Critical path report for clock 'clk' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  1.00  1.00 Source $abc$511$auto$blifparse.cc:557:parse_blif$530.Q
+Info:    routing  3.90  4.90 Net IO_1_bidirectional_frame_config_pass_I[6] (1,12) -> (1,11)
+Info:                          Sink $abc$511$auto$blifparse.cc:557:parse_blif$517.I0
+Info:                           prediction: 6.000000 ns estimate: 6.000000 ns
+Info:                  0.100 X1Y11/LD_I1/X1Y11/D_PERM_I0
+Info:                  0.400 X1Y11/J_l_CD_END1.LD_I1
+Info:                  0.400 X1Y11/J_l_CD_BEG1.J_l_CD_END1
+Info:                  0.400 X1Y11/JE2END2.J_l_CD_BEG1
+Info:                  0.400 X1Y11/JE2BEG2.JE2END2
+Info:                  0.400 X1Y11/N1END1.JE2BEG2
+Info:                  0.400 X1Y12/N1BEG1.N1END1
+Info:                  0.400 X1Y12/LD_O.N1BEG1
+Info:                  1.000 X1Y12/D_Q/X1Y12/LD_O
+Info:                          Defined in:
+Info:                               /home/jart/work/uni/FABulous/demo_2.0b4_verilog/user_design/sequential_16bit_en.v:1.88-1.94
+Info:      logic  3.00  7.90 Source $abc$511$auto$blifparse.cc:557:parse_blif$517.O
+Info:    routing  2.90  10.80 Net $abc$511$new_n41 (1,11) -> (1,10)
+Info:                          Sink $abc$511$auto$blifparse.cc:557:parse_blif$515.I1
+Info:                           prediction: 6.000000 ns estimate: 6.000000 ns
+Info:                  0.100 X1Y10/LA_I3/X1Y10/A_PERM_I1
+Info:                  0.400 X1Y10/J2MID_ABb_END3.LA_I3
+Info:                  0.400 X1Y10/J2MID_ABb_BEG3.J2MID_ABb_END3
+Info:                  0.400 X1Y10/N2MID1.J2MID_ABb_BEG3
+Info:                  0.400 X1Y11/N2BEG1.N2MID1
+Info:                  0.400 X1Y11/JN2END1.N2BEG1
+Info:                  0.400 X1Y11/JN2BEG1.JN2END1
+Info:                  0.400 X1Y11/LD_O.JN2BEG1
+Info:      logic  3.00  13.80 Source $abc$511$auto$blifparse.cc:557:parse_blif$515.O
+Info:    routing  5.30  19.10 Net $abc$511$auto$alumacc.cc:512:replace_alu$49.CO[8]_new (1,10) -> (1,7)
+Info:                          Sink $abc$511$auto$blifparse.cc:557:parse_blif$514.I0
+Info:                           prediction: 12.000000 ns estimate: 12.000000 ns
+Info:                  0.100 X1Y7/LH_I3/X1Y7/H_PERM_I0
+Info:                  0.400 X1Y7/J2MID_GHb_END3.LH_I3
+Info:                  0.400 X1Y7/J2MID_GHb_BEG3.J2MID_GHb_END3
+Info:                  0.400 X1Y7/N2MID1.J2MID_GHb_BEG3
+Info:                  0.400 X1Y8/N2BEG1.N2MID1
+Info:                  0.400 X1Y8/JN2END1.N2BEG1
+Info:                  0.400 X1Y8/JN2BEG1.JN2END1
+Info:                  0.400 X1Y8/N2END2.JN2BEG1
+Info:                  0.400 X1Y9/N2BEGb2.N2END2
+Info:                  0.400 X1Y9/N2MID2.N2BEGb2
+Info:                  0.400 X1Y10/N2BEG2.N2MID2
+Info:                  0.400 X1Y10/JN2END2.N2BEG2
+Info:                  0.400 X1Y10/JN2BEG2.JN2END2
+Info:                  0.400 X1Y10/LA_O.JN2BEG2
+Info:                          Defined in:
+Info:                               /home/jart/work/uni/FABulous/demo_2.0b4_verilog/user_design/sequential_16bit_en.v:11.24-11.34
+Info:                               /home/jart/tools/oss-cad-suite/lib/../share/yosys/techmap.v:274.23-274.25
+Info:      logic  3.00  22.10 Source $abc$511$auto$blifparse.cc:557:parse_blif$514.O
+Info:    routing  2.10  24.20 Net $abc$511$auto$alumacc.cc:512:replace_alu$49.CO[11]_new (1,7) -> (1,7)
+Info:                          Sink $abc$511$auto$blifparse.cc:557:parse_blif$543.I0
+Info:                           prediction: 3.000000 ns estimate: 3.000000 ns
+Info:                  0.100 X1Y7/LG_I1/X1Y7/G_PERM_I0
+Info:                  0.400 X1Y7/J_l_GH_END1.LG_I1
+Info:                  0.400 X1Y7/J_l_GH_BEG1.J_l_GH_END1
+Info:                  0.400 X1Y7/JE2END4.J_l_GH_BEG1
+Info:                  0.400 X1Y7/JE2BEG4.JE2END4
+Info:                  0.400 X1Y7/LH_O.JE2BEG4
+Info:                          Defined in:
+Info:                               /home/jart/work/uni/FABulous/demo_2.0b4_verilog/user_design/sequential_16bit_en.v:11.24-11.34
+Info:                               /home/jart/tools/oss-cad-suite/lib/../share/yosys/techmap.v:274.23-274.25
+Info:      logic  3.00  27.20 Source $abc$511$auto$blifparse.cc:557:parse_blif$543.O
+Info:    routing  2.90  30.10 Net $abc$511$auto$alumacc.cc:512:replace_alu$49.CO[14]_new (1,7) -> (2,7)
+Info:                          Sink $abc$511$auto$blifparse.cc:557:parse_blif$542.I2
+Info:                           prediction: 6.000000 ns estimate: 6.000000 ns
+Info:                  0.100 X2Y7/LG_I1/X2Y7/G_PERM_I2
+Info:                  0.400 X2Y7/J2MID_GHa_END1.LG_I1
+Info:                  0.400 X2Y7/J2MID_GHa_BEG1.J2MID_GHa_END1
+Info:                  0.400 X2Y7/JE2END6.J2MID_GHa_BEG1
+Info:                  0.400 X2Y7/JE2BEG6.JE2END6
+Info:                  0.400 X2Y7/E1END3.JE2BEG6
+Info:                  0.400 X1Y7/E1BEG3.E1END3
+Info:                  0.400 X1Y7/LG_O.E1BEG3
+Info:                          Defined in:
+Info:                               /home/jart/work/uni/FABulous/demo_2.0b4_verilog/user_design/sequential_16bit_en.v:11.24-11.34
+Info:                               /home/jart/tools/oss-cad-suite/lib/../share/yosys/techmap.v:274.23-274.25
+Info:      setup  2.50  32.60 Source $abc$511$auto$blifparse.cc:557:parse_blif$542.I2
+Info: 15.50 ns logic, 17.10 ns routing
+
+Info: Max frequency for clock 'clk': 30.67 MHz (PASS at 12.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 50733,  52034) |*** 
+Info: [ 52034,  53335) | 
+Info: [ 53335,  54636) |* 
+Info: [ 54636,  55937) |** 
+Info: [ 55937,  57238) |* 
+Info: [ 57238,  58539) | 
+Info: [ 58539,  59840) |*** 
+Info: [ 59840,  61141) | 
+Info: [ 61141,  62442) | 
+Info: [ 62442,  63743) |* 
+Info: [ 63743,  65044) |*** 
+Info: [ 65044,  66345) | 
+Info: [ 66345,  67646) | 
+Info: [ 67646,  68947) | 
+Info: [ 68947,  70248) |* 
+Info: [ 70248,  71549) | 
+Info: [ 71549,  72850) | 
+Info: [ 72850,  74151) | 
+Info: [ 74151,  75452) | 
+Info: [ 75452,  76753) |*************** 
+
+Info: Program finished normally.

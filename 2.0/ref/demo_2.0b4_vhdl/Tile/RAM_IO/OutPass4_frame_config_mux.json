@@ -1,0 +1,689 @@
+{
+  "creator": "Yosys 0.63+190 (git sha1 37ca545b6, clang++ 18.1.8 -fPIC -O3)",
+  "modules": {
+    "OutPass4_frame_config_mux": {
+      "attributes": {
+        "FABulous": "TRUE",
+        "BelMap": "TRUE",
+        "O0_reg": 0,
+        "O1_reg": 1,
+        "O2_reg": 2,
+        "O3_reg": 3,
+        "top": 1,
+        "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:55.218-134.10"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "bits": [ 11, 12, 13, 14 ]
+        }
+      },
+      "cells": {
+        "$procdff$9": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 4
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:132.3-133.14"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 10 ],
+            "D": [ 2, 3, 4, 5 ],
+            "Q": [ 15, 16, 17, 18 ]
+          }
+        },
+        "cus_mux21_2_inst2": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:107.13-111.31"
+          },
+          "port_directions": {
+            "a0": "input",
+            "a1": "input",
+            "s": "input",
+            "x": "output"
+          },
+          "connections": {
+            "a0": [ 4 ],
+            "a1": [ 17 ],
+            "s": [ 13 ],
+            "x": [ 8 ]
+          }
+        },
+        "cus_mux21_inst": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:83.13-87.28"
+          },
+          "port_directions": {
+            "a0": "input",
+            "a1": "input",
+            "s": "input",
+            "x": "output"
+          },
+          "connections": {
+            "a0": [ 2 ],
+            "a1": [ 15 ],
+            "s": [ 11 ],
+            "x": [ 6 ]
+          }
+        },
+        "cus_mux21_inst1": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:95.13-99.29"
+          },
+          "port_directions": {
+            "a0": "input",
+            "a1": "input",
+            "s": "input",
+            "x": "output"
+          },
+          "connections": {
+            "a0": [ 3 ],
+            "a1": [ 16 ],
+            "s": [ 12 ],
+            "x": [ 7 ]
+          }
+        },
+        "cus_mux21_inst3": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:119.13-123.29"
+          },
+          "port_directions": {
+            "a0": "input",
+            "a1": "input",
+            "s": "input",
+            "x": "output"
+          },
+          "connections": {
+            "a0": [ 5 ],
+            "a1": [ 18 ],
+            "s": [ 14 ],
+            "x": [ 9 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\n23[3:0]": {
+          "hide_name": 1,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:132.3-133.14"
+          }
+        },
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 11, 12, 13, 14 ],
+          "attributes": {
+            "GLOBAL": "TRUE",
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:59.37-59.47"
+          }
+        },
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:56.17-56.18"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+            "EXTERNAL": "TRUE",
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:57.39-57.40"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "EXTERNAL": "TRUE",
+            "SHARED_PORT": "TRUE",
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:58.53-58.60"
+          }
+        },
+        "cus_mux21_2_inst2.x": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:69.8-69.28"
+          }
+        },
+        "cus_mux21_inst.x": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:61.8-61.25"
+          }
+        },
+        "cus_mux21_inst1.x": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:65.8-65.26"
+          }
+        },
+        "cus_mux21_inst3.x": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:73.8-73.26"
+          }
+        },
+        "n10": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:66.8-66.11"
+          }
+        },
+        "n11": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:67.8-67.11"
+          }
+        },
+        "n12": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:68.8-68.11"
+          }
+        },
+        "n14": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:70.8-70.11"
+          }
+        },
+        "n15": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:71.8-71.11"
+          }
+        },
+        "n16": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:72.8-72.11"
+          }
+        },
+        "n18": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:74.8-74.11"
+          }
+        },
+        "n19": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:75.8-75.11"
+          }
+        },
+        "n20": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:76.8-76.11"
+          }
+        },
+        "n22": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:77.14-77.17"
+          }
+        },
+        "n23": {
+          "hide_name": 0,
+          "bits": [ 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:78.13-78.16"
+          }
+        },
+        "n6": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:62.8-62.10"
+          }
+        },
+        "n7": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:63.8-63.10"
+          }
+        },
+        "n8": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:64.8-64.10"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:60.14-60.15"
+          }
+        }
+      }
+    },
+    "break_comb_loop": {
+      "attributes": {
+        "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:1.1-5.10"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "x": {
+          "direction": "output",
+          "bits": [ 2 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:2.11-2.12"
+          }
+        },
+        "x": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:3.11-3.12"
+          }
+        }
+      }
+    },
+    "cus_mux21": {
+      "attributes": {
+        "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:7.1-53.10"
+      },
+      "ports": {
+        "a0": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "a1": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "s": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "x": {
+          "direction": "output",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$eq$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:39$1": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:39.16-39.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ "0" ],
+            "Y": [ 6 ]
+          }
+        },
+        "$eq$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:43$2": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:43.16-43.27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ "1" ],
+            "Y": [ 7 ]
+          }
+        },
+        "$procmux$6": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": 2,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:48.24-48.24|/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:47.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 8, 9 ],
+            "S": [ 10, 11 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$procmux$7_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 2,
+            "B_SIGNED": 0,
+            "B_WIDTH": 2,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:48.24-48.24|/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:47.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7 ],
+            "B": [ "1", "0" ],
+            "Y": [ 10 ]
+          }
+        },
+        "$procmux$8_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 2,
+            "B_SIGNED": 0,
+            "B_WIDTH": 2,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:47.15-47.15|/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:47.5-51.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7 ],
+            "B": [ "0", "1" ],
+            "Y": [ 11 ]
+          }
+        },
+        "break_comb_loop_inst0": {
+          "hide_name": 0,
+          "type": "break_comb_loop",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:29.19-31.35"
+          },
+          "port_directions": {
+            "a": "input",
+            "x": "output"
+          },
+          "connections": {
+            "a": [ 2 ],
+            "x": [ 8 ]
+          }
+        },
+        "break_comb_loop_inst1": {
+          "hide_name": 0,
+          "type": "break_comb_loop",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:33.19-35.35"
+          },
+          "port_directions": {
+            "a": "input",
+            "x": "output"
+          },
+          "connections": {
+            "a": [ 3 ],
+            "x": [ 9 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\n39[0:0]": {
+          "hide_name": 1,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:46.3-51.12"
+          }
+        },
+        "$1\\n39[0:0]": {
+          "hide_name": 1,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:46.3-51.12"
+          }
+        },
+        "$eq$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:39$1_Y": {
+          "hide_name": 1,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:39.16-39.27"
+          }
+        },
+        "$eq$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:43$2_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:43.16-43.27"
+          }
+        },
+        "$procmux$6_Y": {
+          "hide_name": 1,
+          "bits": [ 5 ],
+          "attributes": {
+          }
+        },
+        "$procmux$7_CMP": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+          }
+        },
+        "$procmux$8_CMP": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+          }
+        },
+        "a0": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:8.11-8.13"
+          }
+        },
+        "a1": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:9.11-9.13"
+          }
+        },
+        "ain": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:13.14-13.17"
+          }
+        },
+        "break_comb_loop_inst0_n25": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:14.8-14.33"
+          }
+        },
+        "break_comb_loop_inst1_n28": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:15.8-15.33"
+          }
+        },
+        "n31": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:16.8-16.11"
+          }
+        },
+        "n33": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:17.8-17.11"
+          }
+        },
+        "n34": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:18.8-18.11"
+          }
+        },
+        "n36": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:19.8-19.11"
+          }
+        },
+        "n38": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:20.14-20.17"
+          }
+        },
+        "n39": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:21.7-21.10"
+          }
+        },
+        "n40": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:22.14-22.17"
+          }
+        },
+        "s": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:10.11-10.12"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:12.8-12.11"
+          }
+        },
+        "x": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/RAM_IO/OutPass4_frame_config_mux.v:11.11-11.12"
+          }
+        }
+      }
+    }
+  }
+}
