@@ -7,6 +7,15 @@ of FABulous.
 
 The demos are also used for testing FABulous.
 
+## Project layout
+
+| Directory | Description |
+|-----------|-------------|
+| `legacy/clean/` | Clean FABulous 1.3 projects for error-checking runs |
+| `legacy/reference/` | FABulous 1.3 reference outputs for regression diffing (CSV/TXT only) |
+| `legacy/sim/` | Full user-flow projects: fabric gen → synthesis → P&R → simulation |
+| `2.0/ref/` | FABulous 2.0 reference outputs for regression diffing (compiled with beta 4) |
+
 ## Running tests locally
 
 A `Makefile` is provided to run the reference tests against this repo without any manual setup.

@@ -56,6 +56,28 @@ reference_projects:
     exclude_patterns:
      - "eFPGA_geometry.csv"
 
+  - name: "diff_2.0b4_verilog_reference_demo"
+    path: "./2.0/ref/demo_2.0b4_verilog/"
+    language: "verilog"
+    test_mode: "diff"
+    description: "Run and diff FABulous 2.0 beta 4 Verilog project for regression testing"
+    include_patterns:
+     - "*.csv"
+     - "*.txt"
+    exclude_patterns:
+     - "eFPGA_geometry.csv"
+
+  - name: "diff_2.0b4_vhdl_reference_demo"
+    path: "./2.0/ref/demo_2.0b4_vhdl/"
+    language: "vhdl"
+    test_mode: "diff"
+    description: "Run and diff FABulous 2.0 beta 4 VHDL project for regression testing"
+    include_patterns:
+     - "*.csv"
+     - "*.txt"
+    exclude_patterns:
+     - "eFPGA_geometry.csv"
+
   - name: "run_user_flow_verilog"
     path: "./legacy/sim/demo_verilog/"
     language: "verilog"

@@ -1,0 +1,973 @@
+{
+  "creator": "Yosys 0.63+190 (git sha1 37ca545b6, clang++ 18.1.8 -fPIC -O3)",
+  "modules": {
+    "MULADD": {
+      "attributes": {
+        "FABulous": "TRUE",
+        "BelMap": "TRUE",
+        "A_reg": 0,
+        "B_reg": 1,
+        "C_reg": 2,
+        "ACC": 3,
+        "signExtension": 4,
+        "ACCout": 5,
+        "top": 1,
+        "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:1.309-155.10"
+      },
+      "ports": {
+        "A": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "B": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ]
+        },
+        "Q": {
+          "direction": "output",
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ]
+        },
+        "clr": {
+          "direction": "input",
+          "bits": [ 58 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 59 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "bits": [ 60, 61, 62, 63, 64, 65 ]
+        }
+      },
+      "cells": {
+        "$add$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:134$12": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 20,
+            "B_SIGNED": 0,
+            "B_WIDTH": 20,
+            "Y_WIDTH": 20
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:134.16-134.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85 ],
+            "B": [ 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ],
+            "Y": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125 ]
+          }
+        },
+        "$mul$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:108$9": {
+          "hide_name": 1,
+          "type": "$mul",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 16,
+            "B_SIGNED": 0,
+            "B_WIDTH": 16,
+            "Y_WIDTH": 16
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:108.16-108.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 126, 127, 128, 129, 130, 131, 132, 133, "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ 134, 135, 136, 137, 138, 139, 140, 141, "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157 ]
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:100$7": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:100.16-100.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 63 ],
+            "Y": [ 158 ]
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:114$10": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:114.16-114.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 64 ],
+            "Y": [ 159 ]
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:138$13": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:138.16-138.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 65 ],
+            "Y": [ 160 ]
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:82$1": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:82.15-82.18"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 60 ],
+            "Y": [ 161 ]
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:88$3": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:88.15-88.18"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 61 ],
+            "Y": [ 162 ]
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:94$5": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:94.15-94.18"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 62 ],
+            "Y": [ 163 ]
+          }
+        },
+        "$procdff$20": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 20
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:153.3-154.16"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 59 ],
+            "D": [ 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ],
+            "Q": [ 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203 ]
+          }
+        },
+        "$procdff$21": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 20
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:150.3-151.14"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 59 ],
+            "D": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+            "Q": [ 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223 ]
+          }
+        },
+        "$procdff$22": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 8
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:147.3-148.14"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 59 ],
+            "D": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "Q": [ 224, 225, 226, 227, 228, 229, 230, 231 ]
+          }
+        },
+        "$procdff$23": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 8
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:144.3-145.14"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 59 ],
+            "D": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "Q": [ 232, 233, 234, 235, 236, 237, 238, 239 ]
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:102$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 20
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:102.16-102.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203 ],
+            "B": [ 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+            "S": [ 158 ],
+            "Y": [ 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ]
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:116$11": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 20
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:116.16-116.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 157, 157, 157, 157 ],
+            "B": [ 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, "0", "0", "0", "0" ],
+            "S": [ 159 ],
+            "Y": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85 ]
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:140$14": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 20
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:140.16-140.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203 ],
+            "B": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125 ],
+            "S": [ 160 ],
+            "Y": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ]
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:142$15": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 20
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:142.16-142.52"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 58 ],
+            "Y": [ 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ]
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:84$2": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 8
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:84.15-84.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 232, 233, 234, 235, 236, 237, 238, 239 ],
+            "B": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "S": [ 161 ],
+            "Y": [ 126, 127, 128, 129, 130, 131, 132, 133 ]
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:90$4": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 8
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:90.15-90.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 224, 225, 226, 227, 228, 229, 230, 231 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 162 ],
+            "Y": [ 134, 135, 136, 137, 138, 139, 140, 141 ]
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:96$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 20
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:96.15-96.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223 ],
+            "B": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+            "S": [ 163 ],
+            "Y": [ 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\n43[7:0]": {
+          "hide_name": 1,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:144.3-145.14"
+          }
+        },
+        "$0\\n44[7:0]": {
+          "hide_name": 1,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:147.3-148.14"
+          }
+        },
+        "$0\\n45[19:0]": {
+          "hide_name": 1,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:150.3-151.14"
+          }
+        },
+        "$0\\n46[19:0]": {
+          "hide_name": 1,
+          "bits": [ 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:153.3-154.16"
+          }
+        },
+        "$add$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:134$12_Y": {
+          "hide_name": 1,
+          "bits": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:134.16-134.41"
+          }
+        },
+        "$mul$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:108$9_Y": {
+          "hide_name": 1,
+          "bits": [ 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:108.16-108.25"
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:100$7_Y": {
+          "hide_name": 1,
+          "bits": [ 158 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:100.16-100.20"
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:114$10_Y": {
+          "hide_name": 1,
+          "bits": [ 159 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:114.16-114.20"
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:138$13_Y": {
+          "hide_name": 1,
+          "bits": [ 160 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:138.16-138.20"
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:82$1_Y": {
+          "hide_name": 1,
+          "bits": [ 161 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:82.15-82.18"
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:88$3_Y": {
+          "hide_name": 1,
+          "bits": [ 162 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:88.15-88.18"
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:94$5_Y": {
+          "hide_name": 1,
+          "bits": [ 163 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:94.15-94.18"
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:102$8_Y": {
+          "hide_name": 1,
+          "bits": [ 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:102.16-102.31"
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:116$11_Y": {
+          "hide_name": 1,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:116.16-116.31"
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:140$14_Y": {
+          "hide_name": 1,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:140.16-140.31"
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:142$15_Y": {
+          "hide_name": 1,
+          "bits": [ 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:142.16-142.52"
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:84$2_Y": {
+          "hide_name": 1,
+          "bits": [ 126, 127, 128, 129, 130, 131, 132, 133 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:84.15-84.29"
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:90$4_Y": {
+          "hide_name": 1,
+          "bits": [ 134, 135, 136, 137, 138, 139, 140, 141 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:90.15-90.29"
+          }
+        },
+        "$ternary$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:96$6_Y": {
+          "hide_name": 1,
+          "bits": [ 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:96.15-96.29"
+          }
+        },
+        "A": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:2.17-2.18"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:3.17-3.18"
+          }
+        },
+        "C": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:4.18-4.19"
+          }
+        },
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 60, 61, 62, 63, 64, 65 ],
+          "attributes": {
+            "GLOBAL": "TRUE",
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:8.37-8.47"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:5.18-5.19"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 59 ],
+          "attributes": {
+            "EXTERNAL": "TRUE",
+            "SHARED_PORT": "TRUE",
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:7.53-7.60"
+          }
+        },
+        "a_reg": {
+          "hide_name": 0,
+          "bits": [ 232, 233, 234, 235, 236, 237, 238, 239 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:9.14-9.19"
+          }
+        },
+        "acc": {
+          "hide_name": 0,
+          "bits": [ 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:15.15-15.18"
+          }
+        },
+        "b_reg": {
+          "hide_name": 0,
+          "bits": [ 224, 225, 226, 227, 228, 229, 230, 231 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:10.14-10.19"
+          }
+        },
+        "c_reg": {
+          "hide_name": 0,
+          "bits": [ 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:11.15-11.20"
+          }
+        },
+        "clr": {
+          "hide_name": 0,
+          "bits": [ 58 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:6.11-6.14"
+          }
+        },
+        "n1": {
+          "hide_name": 0,
+          "bits": [ 60 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:20.8-20.10"
+          }
+        },
+        "n10": {
+          "hide_name": 0,
+          "bits": [ 63 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:29.8-29.11"
+          }
+        },
+        "n11": {
+          "hide_name": 0,
+          "bits": [ 158 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:30.8-30.11"
+          }
+        },
+        "n12": {
+          "hide_name": 0,
+          "bits": [ 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:31.15-31.18"
+          }
+        },
+        "n13": {
+          "hide_name": 0,
+          "bits": [ 126, 127, 128, 129, 130, 131, 132, 133, "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:32.15-32.18"
+          }
+        },
+        "n14": {
+          "hide_name": 0,
+          "bits": [ 134, 135, 136, 137, 138, 139, 140, 141, "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:33.15-33.18"
+          }
+        },
+        "n15": {
+          "hide_name": 0,
+          "bits": [ 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:34.15-34.18"
+          }
+        },
+        "n17": {
+          "hide_name": 0,
+          "bits": [ 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:35.15-35.18"
+          }
+        },
+        "n18": {
+          "hide_name": 0,
+          "bits": [ 64 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:36.8-36.11"
+          }
+        },
+        "n19": {
+          "hide_name": 0,
+          "bits": [ 159 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:37.8-37.11"
+          }
+        },
+        "n2": {
+          "hide_name": 0,
+          "bits": [ 161 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:21.8-21.10"
+          }
+        },
+        "n20": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:38.15-38.18"
+          }
+        },
+        "n21": {
+          "hide_name": 0,
+          "bits": [ 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:39.8-39.11"
+          }
+        },
+        "n22": {
+          "hide_name": 0,
+          "bits": [ 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:40.8-40.11"
+          }
+        },
+        "n23": {
+          "hide_name": 0,
+          "bits": [ 157, 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:41.14-41.17"
+          }
+        },
+        "n24": {
+          "hide_name": 0,
+          "bits": [ 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:42.8-42.11"
+          }
+        },
+        "n25": {
+          "hide_name": 0,
+          "bits": [ 157, 157, 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:43.14-43.17"
+          }
+        },
+        "n26": {
+          "hide_name": 0,
+          "bits": [ 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:44.8-44.11"
+          }
+        },
+        "n27": {
+          "hide_name": 0,
+          "bits": [ 157, 157, 157, 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:45.14-45.17"
+          }
+        },
+        "n28": {
+          "hide_name": 0,
+          "bits": [ 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 157, 157, 157, 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:46.15-46.18"
+          }
+        },
+        "n29": {
+          "hide_name": 0,
+          "bits": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:47.15-47.18"
+          }
+        },
+        "n3": {
+          "hide_name": 0,
+          "bits": [ 126, 127, 128, 129, 130, 131, 132, 133 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:22.14-22.16"
+          }
+        },
+        "n30": {
+          "hide_name": 0,
+          "bits": [ 65 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:48.8-48.11"
+          }
+        },
+        "n31": {
+          "hide_name": 0,
+          "bits": [ 160 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:49.8-49.11"
+          }
+        },
+        "n32": {
+          "hide_name": 0,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:50.15-50.18"
+          }
+        },
+        "n37": {
+          "hide_name": 0,
+          "bits": [ 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:51.15-51.18"
+          }
+        },
+        "n4": {
+          "hide_name": 0,
+          "bits": [ 61 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:23.8-23.10"
+          }
+        },
+        "n43": {
+          "hide_name": 0,
+          "bits": [ 232, 233, 234, 235, 236, 237, 238, 239 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:52.13-52.16"
+          }
+        },
+        "n44": {
+          "hide_name": 0,
+          "bits": [ 224, 225, 226, 227, 228, 229, 230, 231 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:53.13-53.16"
+          }
+        },
+        "n45": {
+          "hide_name": 0,
+          "bits": [ 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:54.14-54.17"
+          }
+        },
+        "n46": {
+          "hide_name": 0,
+          "bits": [ 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:55.14-55.17"
+          }
+        },
+        "n5": {
+          "hide_name": 0,
+          "bits": [ 162 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:24.8-24.10"
+          }
+        },
+        "n6": {
+          "hide_name": 0,
+          "bits": [ 134, 135, 136, 137, 138, 139, 140, 141 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:25.14-25.16"
+          }
+        },
+        "n7": {
+          "hide_name": 0,
+          "bits": [ 62 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:26.8-26.10"
+          }
+        },
+        "n8": {
+          "hide_name": 0,
+          "bits": [ 163 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:27.8-27.10"
+          }
+        },
+        "n9": {
+          "hide_name": 0,
+          "bits": [ 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:28.15-28.17"
+          }
+        },
+        "opa": {
+          "hide_name": 0,
+          "bits": [ 126, 127, 128, 129, 130, 131, 132, 133 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:12.14-12.17"
+          }
+        },
+        "opb": {
+          "hide_name": 0,
+          "bits": [ 134, 135, 136, 137, 138, 139, 140, 141 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:13.14-13.17"
+          }
+        },
+        "opc": {
+          "hide_name": 0,
+          "bits": [ 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:14.15-14.18"
+          }
+        },
+        "product": {
+          "hide_name": 0,
+          "bits": [ 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:18.15-18.22"
+          }
+        },
+        "product_extended": {
+          "hide_name": 0,
+          "bits": [ 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:19.15-19.31"
+          }
+        },
+        "sum": {
+          "hide_name": 0,
+          "bits": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:16.15-16.18"
+          }
+        },
+        "sum_in": {
+          "hide_name": 0,
+          "bits": [ 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/DSP/DSP_bot/MULADD.v:17.15-17.21"
+          }
+        }
+      }
+    }
+  }
+}

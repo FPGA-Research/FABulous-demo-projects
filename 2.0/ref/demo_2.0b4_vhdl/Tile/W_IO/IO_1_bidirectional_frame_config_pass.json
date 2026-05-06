@@ -1,0 +1,178 @@
+{
+  "creator": "Yosys 0.63+190 (git sha1 37ca545b6, clang++ 18.1.8 -fPIC -O3)",
+  "modules": {
+    "IO_1_bidirectional_frame_config_pass": {
+      "attributes": {
+        "FABulous": "TRUE",
+        "BelMap": "TRUE",
+        "top": 1,
+        "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:1.38-21.10"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "T": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "Q": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "I_top": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "T_top": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "O_top": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 7 ]
+        }
+      },
+      "cells": {
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:17$1": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:17.15-17.17"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$procdff$3": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:19.3-20.18"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 7 ],
+            "D": [ 4 ],
+            "Q": [ 5 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\n10[0:0]": {
+          "hide_name": 1,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:19.3-20.18"
+          }
+        },
+        "$not$/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:17$1_Y": {
+          "hide_name": 1,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:17.15-17.17"
+          }
+        },
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:2.11-2.12"
+          }
+        },
+        "I_top": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:6.11-6.16"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:4.11-4.12"
+          }
+        },
+        "O_top": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:8.11-8.16"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:5.11-5.12"
+          }
+        },
+        "T": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:3.11-3.12"
+          }
+        },
+        "T_top": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:7.11-7.16"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "EXTERNAL": "TRUE",
+            "SHARED_PORT": "TRUE",
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:9.53-9.60"
+          }
+        },
+        "n10": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:11.7-11.10"
+          }
+        },
+        "n9": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_vhdl/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:10.8-10.10"
+          }
+        }
+      }
+    }
+  }
+}

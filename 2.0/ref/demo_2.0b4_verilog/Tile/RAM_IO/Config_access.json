@@ -1,0 +1,53 @@
+{
+  "creator": "Yosys 0.63+190 (git sha1 37ca545b6, clang++ 18.1.8 -fPIC -O3)",
+  "modules": {
+    "Config_access": {
+      "attributes": {
+        "C_bit3": 3,
+        "C_bit2": 2,
+        "C_bit1": 1,
+        "C_bit0": 0,
+        "BelMap": 1,
+        "FABulous": 1,
+        "dynports": 1,
+        "top": 1,
+        "src": "/home/jart/work/uni/FABulous/demo_2.0b4_verilog/Tile/RAM_IO/Config_access.v:7.1-17.10"
+      },
+      "parameter_default_values": {
+        "NoConfigBits": 4
+      },
+      "ports": {
+        "C_bit": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C_bit": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_verilog/Tile/RAM_IO/Config_access.v:10.42-10.47"
+          }
+        },
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "FABulous": 1,
+            "GLOBAL": 1,
+            "src": "/home/jart/work/uni/FABulous/demo_2.0b4_verilog/Tile/RAM_IO/Config_access.v:12.52-12.62"
+          }
+        }
+      }
+    }
+  }
+}
