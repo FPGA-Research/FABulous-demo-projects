@@ -41,6 +41,8 @@ reference_projects:
     exclude_patterns:
      - "eFPGA_geometry.csv"
      - "*_switch_matrix.csv"
+     - .FABulous/bel.v3.txt
+     - .FABulous/placement_estimate.txt
 
   # We can only check for bitstream spec, pips.txt. and bel.txt and so on here, since the RTL generation changed a lot
   # but should be still logically equal.
@@ -55,6 +57,8 @@ reference_projects:
     exclude_patterns:
      - "eFPGA_geometry.csv"
      - "*_switch_matrix.csv"
+     - .FABulous/bel.v3.txt
+     - .FABulous/placement_estimate.txt
 
   - name: "diff_2.0b4_verilog_reference_demo"
     path: "./2.0/ref/demo_2.0b4_verilog/"
@@ -67,6 +71,8 @@ reference_projects:
     exclude_patterns:
      - "eFPGA_geometry.csv"
      - "*_switch_matrix.csv"
+     - .FABulous/bel.v3.txt
+     - .FABulous/placement_estimate.txt
 
   - name: "diff_2.0b4_vhdl_reference_demo"
     path: "./2.0/ref/demo_2.0b4_vhdl/"
@@ -79,6 +85,8 @@ reference_projects:
     exclude_patterns:
      - "eFPGA_geometry.csv"
      - "*_switch_matrix.csv"
+     - .FABulous/bel.v3.txt
+     - .FABulous/placement_estimate.txt
 
   - name: "run_user_flow_verilog"
     path: "./legacy/sim/demo_verilog/"
