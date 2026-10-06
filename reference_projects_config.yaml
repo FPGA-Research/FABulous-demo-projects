@@ -106,6 +106,7 @@ reference_projects:
     language: "vhdl"
     test_mode: "diff"
     description: "Run and diff FABulous 2.2.0 VHDL project for regression testing"
+    rtl_equivalence: true
     include_patterns:
      - "*.csv"
      - "*.txt"
