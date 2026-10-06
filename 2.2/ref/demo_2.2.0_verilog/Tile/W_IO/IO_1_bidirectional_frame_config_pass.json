@@ -1,0 +1,169 @@
+{
+  "creator": "Yosys 0.68 (git sha1 38e001a6ff74ca434bf4cc02c053f53619160ab0, Release, Clang /nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/clang++ 21.1.8)",
+  "modules": {
+    "IO_1_bidirectional_frame_config_pass": {
+      "attributes": {
+        "top": 1,
+        "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:18.1-49.10"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "T": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "Q": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "I_top": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "T_top": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "O_top": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "UserCLK": {
+          "direction": "input",
+          "bits": [ 7 ]
+        }
+      },
+      "cells": {
+        "$not$/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:46$2": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:46.20-46.22"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$procdff$3": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:41.5-43.8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 7 ],
+            "D": [ 4 ],
+            "Q": [ 5 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\Q[0:0]": {
+          "hide_name": 1,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:41.5-43.8"
+          }
+        },
+        "$not$/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:46$2_Y": {
+          "hide_name": 1,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:46.20-46.22"
+          }
+        },
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:19.16-19.17"
+          }
+        },
+        "I_top": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:25.42-25.47"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:21.17-21.18"
+          }
+        },
+        "O_top": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:27.41-27.46"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:22.16-22.17"
+          }
+        },
+        "T": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:20.16-20.17"
+          }
+        },
+        "T_top": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:26.42-26.47"
+          }
+        },
+        "UserCLK": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "EXTERNAL": 1,
+            "FABulous": 1,
+            "SHARED_PORT": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/W_IO/IO_1_bidirectional_frame_config_pass.v:31.54-31.61"
+          }
+        }
+      }
+    }
+  }
+}
