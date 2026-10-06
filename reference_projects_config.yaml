@@ -93,6 +93,7 @@ reference_projects:
     language: "verilog"
     test_mode: "diff"
     description: "Run and diff FABulous 2.2.0 Verilog project for regression testing"
+    rtl_equivalence: true
     include_patterns:
      - "*.csv"
      - "*.txt"
