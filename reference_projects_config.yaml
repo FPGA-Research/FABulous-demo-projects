@@ -90,6 +90,32 @@ reference_projects:
      - .FABulous/bel.v3.txt
      - .FABulous/placement_estimate.txt
 
+  - name: "diff_2.2.0_verilog_reference_demo"
+    path: "./2.2/ref/demo_2.2.0_verilog/"
+    language: "verilog"
+    test_mode: "diff"
+    description: "Run and diff FABulous 2.2.0 Verilog project for regression testing"
+    rtl_equivalence: true
+    include_patterns:
+     - "*.csv"
+     - "*.txt"
+    exclude_patterns:
+     # Holds absolute source paths of the machine that generated it.
+     - "eFPGA_geometry.csv"
+
+  - name: "diff_2.2.0_vhdl_reference_demo"
+    path: "./2.2/ref/demo_2.2.0_vhdl/"
+    language: "vhdl"
+    test_mode: "diff"
+    description: "Run and diff FABulous 2.2.0 VHDL project for regression testing"
+    rtl_equivalence: true
+    include_patterns:
+     - "*.csv"
+     - "*.txt"
+    exclude_patterns:
+     # Holds absolute source paths of the machine that generated it.
+     - "eFPGA_geometry.csv"
+
   - name: "run_user_flow_verilog"
     path: "./legacy/sim/demo_verilog/"
     language: "verilog"

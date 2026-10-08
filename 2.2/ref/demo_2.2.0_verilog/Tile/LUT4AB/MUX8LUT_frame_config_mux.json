@@ -1,0 +1,503 @@
+{
+  "creator": "Yosys 0.68 (git sha1 38e001a6ff74ca434bf4cc02c053f53619160ab0, Release, Clang /nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/clang++ 21.1.8)",
+  "modules": {
+    "MUX8LUT_frame_config_mux": {
+      "attributes": {
+        "c1": 1,
+        "c0": 0,
+        "BelMap": 1,
+        "FABulous": 1,
+        "dynports": 1,
+        "top": 1,
+        "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:21.1-155.10"
+      },
+      "parameter_default_values": {
+        "NoConfigBits": 2
+      },
+      "ports": {
+        "A": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "B": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "F": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "G": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "H": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13 ]
+        },
+        "M_AB": {
+          "direction": "output",
+          "bits": [ 14 ]
+        },
+        "M_AD": {
+          "direction": "output",
+          "bits": [ 15 ]
+        },
+        "M_AH": {
+          "direction": "output",
+          "bits": [ 16 ]
+        },
+        "M_EF": {
+          "direction": "output",
+          "bits": [ 17 ]
+        },
+        "ConfigBits": {
+          "direction": "input",
+          "bits": [ 18, 19 ]
+        }
+      },
+      "cells": {
+        "cus_mux21_AB": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:52.15-57.6"
+          },
+          "connections": {
+            "A0": [ 2 ],
+            "A1": [ 3 ],
+            "S": [ 10 ],
+            "X": [ 14 ]
+          }
+        },
+        "cus_mux21_AD": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:109.15-114.6"
+          },
+          "connections": {
+            "A0": [ 14 ],
+            "A1": [ 20 ],
+            "S": [ 11 ],
+            "X": [ 21 ]
+          }
+        },
+        "cus_mux21_AH": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:123.15-128.6"
+          },
+          "connections": {
+            "A0": [ 21 ],
+            "A1": [ 22 ],
+            "S": [ 13 ],
+            "X": [ 23 ]
+          }
+        },
+        "cus_mux21_CD": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:59.15-64.6"
+          },
+          "connections": {
+            "A0": [ 4 ],
+            "A1": [ 5 ],
+            "S": [ 24 ],
+            "X": [ 20 ]
+          }
+        },
+        "cus_mux21_EF": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:66.15-71.6"
+          },
+          "connections": {
+            "A0": [ 6 ],
+            "A1": [ 7 ],
+            "S": [ 25 ],
+            "X": [ 17 ]
+          }
+        },
+        "cus_mux21_EH": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:116.15-121.6"
+          },
+          "connections": {
+            "A0": [ 17 ],
+            "A1": [ 26 ],
+            "S": [ 27 ],
+            "X": [ 22 ]
+          }
+        },
+        "cus_mux21_EH_GH": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:130.15-135.6"
+          },
+          "connections": {
+            "A0": [ 26 ],
+            "A1": [ 22 ],
+            "S": [ 18 ],
+            "X": [ 28 ]
+          }
+        },
+        "cus_mux21_GH": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:73.15-78.6"
+          },
+          "connections": {
+            "A0": [ 8 ],
+            "A1": [ 9 ],
+            "S": [ 29 ],
+            "X": [ 26 ]
+          }
+        },
+        "cus_mux21_M_AD": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:139.15-144.6"
+          },
+          "connections": {
+            "A0": [ 20 ],
+            "A1": [ 21 ],
+            "S": [ 18 ],
+            "X": [ 15 ]
+          }
+        },
+        "cus_mux21_M_AH": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:146.15-151.6"
+          },
+          "connections": {
+            "A0": [ 28 ],
+            "A1": [ 23 ],
+            "S": [ 19 ],
+            "X": [ 16 ]
+          }
+        },
+        "cus_mux21_sCD": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:80.15-85.6"
+          },
+          "connections": {
+            "A0": [ 11 ],
+            "A1": [ 10 ],
+            "S": [ 18 ],
+            "X": [ 24 ]
+          }
+        },
+        "cus_mux21_sEF": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:87.15-92.6"
+          },
+          "connections": {
+            "A0": [ 12 ],
+            "A1": [ 10 ],
+            "S": [ 19 ],
+            "X": [ 25 ]
+          }
+        },
+        "cus_mux21_sEH": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:101.15-106.6"
+          },
+          "connections": {
+            "A0": [ 13 ],
+            "A1": [ 11 ],
+            "S": [ 19 ],
+            "X": [ 27 ]
+          }
+        },
+        "cus_mux21_sGH": {
+          "hide_name": 0,
+          "type": "cus_mux21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:94.15-99.6"
+          },
+          "connections": {
+            "A0": [ 27 ],
+            "A1": [ 25 ],
+            "S": [ 18 ],
+            "X": [ 29 ]
+          }
+        }
+      },
+      "netnames": {
+        "A": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:25.16-25.17"
+          }
+        },
+        "AB": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:42.10-42.12"
+          }
+        },
+        "AD": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:44.10-44.12"
+          }
+        },
+        "AH": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:44.18-44.20"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:26.16-26.17"
+          }
+        },
+        "C": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:27.16-27.17"
+          }
+        },
+        "CD": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:42.14-42.16"
+          }
+        },
+        "ConfigBits": {
+          "hide_name": 0,
+          "bits": [ 18, 19 ],
+          "attributes": {
+            "FABulous": 1,
+            "GLOBAL": 1,
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:39.58-39.68"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:28.16-28.17"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:29.16-29.17"
+          }
+        },
+        "EF": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:42.18-42.20"
+          }
+        },
+        "EH": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:44.14-44.16"
+          }
+        },
+        "EH_GH": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:45.10-45.15"
+          }
+        },
+        "F": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:30.16-30.17"
+          }
+        },
+        "G": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:31.16-31.17"
+          }
+        },
+        "GH": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:42.22-42.24"
+          }
+        },
+        "H": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:32.16-32.17"
+          }
+        },
+        "M_AB": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:34.17-34.21"
+          }
+        },
+        "M_AD": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:35.17-35.21"
+          }
+        },
+        "M_AH": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:36.17-36.21"
+          }
+        },
+        "M_EF": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:37.17-37.21"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:33.22-33.23"
+          }
+        },
+        "c0": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:47.10-47.12"
+          }
+        },
+        "c1": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:47.14-47.16"
+          }
+        },
+        "sCD": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:43.10-43.13"
+          }
+        },
+        "sEF": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:43.15-43.18"
+          }
+        },
+        "sEH": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:43.25-43.28"
+          }
+        },
+        "sGH": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "/tmp/claude-1000/gen22/demo_2.2.0_verilog/Tile/LUT4AB/MUX8LUT_frame_config_mux.v:43.20-43.23"
+          }
+        }
+      }
+    }
+  }
+}
