@@ -16,6 +16,7 @@ The demos are also used for testing FABulous.
 | `legacy/sim/` | Full user-flow projects: fabric gen → synthesis → P&R → simulation |
 | `2.0/ref/` | FABulous 2.0 reference outputs for regression diffing (compiled with beta 4) |
 | `2.2/ref/` | FABulous 2.2.0 reference outputs for regression diffing |
+| `2.2/feature/` | Feature references (DSP supertile): diff + simulate a design on every DSP block (`make sim` in `Test/`) |
 
 ## Running tests locally
 

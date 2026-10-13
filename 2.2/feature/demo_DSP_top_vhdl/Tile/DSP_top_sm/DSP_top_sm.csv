@@ -1,0 +1,6 @@
+SuperTILE,DSP_top_sm,,,,,,,,,,,,,,,,,
+DSP_top_sm_top,,,,,,,,,,,,,,,,,,
+DSP_top_sm_bot,,,,,,,,,,,,,,,,,,
+BEL,./MULADD.vhdl,DSP_,,,,,,,,,,,,,,,,
+MATRIX,./DSP_top_sm_switch_matrix.list,,,,,,,,,,,,,,,,,
+EndSuperTILE,,,,,,,,,,,,,,,,,,

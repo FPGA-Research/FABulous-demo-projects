@@ -116,6 +116,47 @@ reference_projects:
      # Holds absolute source paths of the machine that generated it.
      - "eFPGA_geometry.csv"
 
+  # DSP_top_sm supertile fabric: diff generated outputs against the reference,
+  # then synth + P&R a design onto all 7 MULADD blocks and check them in simulation.
+  - name: "diff_2.2_dsp_top_verilog_reference_sim"
+    path: "./2.2/feature/demo_DSP_top_verilog/"
+    language: "verilog"
+    test_mode: "diff"
+    description: "Diff DSP supertile fabric against reference and simulate all 7 DSP blocks (Verilog)"
+    include_patterns:
+     - "*.csv"
+     - "*.txt"
+    exclude_patterns:
+     # Holds absolute source paths of the machine that generated it.
+     - "eFPGA_geometry.csv"
+    post_fab_commands:
+      - cmd: "make sim"
+        cwd: "Test/"
+        required_tools:
+          - "yosys"
+          - "nextpnr-generic"
+          - "iverilog"
+
+  - name: "diff_2.2_dsp_top_vhdl_reference_sim"
+    path: "./2.2/feature/demo_DSP_top_vhdl/"
+    language: "vhdl"
+    test_mode: "diff"
+    description: "Diff DSP supertile fabric against reference and simulate all 7 DSP blocks (VHDL)"
+    include_patterns:
+     - "*.csv"
+     - "*.txt"
+    exclude_patterns:
+     # Holds absolute source paths of the machine that generated it.
+     - "eFPGA_geometry.csv"
+    post_fab_commands:
+      - cmd: "make sim"
+        cwd: "Test/"
+        required_tools:
+          - "yosys"
+          - "nextpnr-generic"
+          - "ghdl"  # yosys -m ghdl plugin (synthesis)
+          - "nvc"
+
   - name: "run_user_flow_verilog"
     path: "./legacy/sim/demo_verilog/"
     language: "verilog"

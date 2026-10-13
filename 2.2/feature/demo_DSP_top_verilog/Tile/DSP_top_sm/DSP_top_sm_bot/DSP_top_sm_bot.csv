@@ -1,0 +1,10 @@
+TILE,DSP_top_sm_bot,,,,,,,,,,,,,,,,,
+#direction,source_name,X-offset,Y-offset,destination_name,wires,,,,,,,,,,,,,
+INCLUDE,../../include/Base.csv
+SJUMP,A,0,0,NULL,4,,,,,,,,,,,,,
+SJUMP,B,0,0,NULL,4,,,,,,,,,,,,,
+SJUMP,C,0,0,NULL,10,,,,,,,,,,,,,
+SJUMP,clr,0,0,NULL,1,,,,,,,,,,,,,
+SJUMP,NULL,0,0,Q,10,,,,,,,,,,,,,
+MATRIX,./DSP_top_sm_bot_switch_matrix.list,,,,,,,,,,,,,,,,,
+EndTILE,,,,,,,,,,,,,,,,,,
