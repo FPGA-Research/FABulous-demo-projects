@@ -66,9 +66,21 @@ reference_projects:
     test_mode: "diff"
     description: "Run and diff FABulous 2.0 beta 4 Verilog project for regression testing"
     rtl_equivalence: true
+    # The pin config must follow the fabric's channel order, not the tile CSV order,
+    # so abutting tiles line up.
+    fab_commands:
+      - "load_fabric"
+      - "gen_io_fabric"
+      - "gen_fabric"
+      - "gen_bitStream_spec"
+      - "gen_top_wrapper"
+      - "gen_routing_model"
+      - "gen_geometry"
+      - "gen_all_io_pin_config"
     include_patterns:
      - "*.csv"
      - "*.txt"
+     - "io_pin_order.yaml"
     exclude_patterns:
      - "eFPGA_geometry.csv"
      - "*_switch_matrix.csv"
@@ -81,9 +93,21 @@ reference_projects:
     test_mode: "diff"
     description: "Run and diff FABulous 2.0 beta 4 VHDL project for regression testing"
     rtl_equivalence: true
+    # The pin config must follow the fabric's channel order, not the tile CSV order,
+    # so abutting tiles line up.
+    fab_commands:
+      - "load_fabric"
+      - "gen_io_fabric"
+      - "gen_fabric"
+      - "gen_bitStream_spec"
+      - "gen_top_wrapper"
+      - "gen_routing_model"
+      - "gen_geometry"
+      - "gen_all_io_pin_config"
     include_patterns:
      - "*.csv"
      - "*.txt"
+     - "io_pin_order.yaml"
     exclude_patterns:
      - "eFPGA_geometry.csv"
      - "*_switch_matrix.csv"
