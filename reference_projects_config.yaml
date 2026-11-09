@@ -181,6 +181,34 @@ reference_projects:
           - "ghdl"  # yosys -m ghdl plugin (synthesis)
           - "nvc"
 
+  # Structural timing model on the IHP SG13G2 typ corner: generate the fabric,
+  # characterise every tile with Yosys + OpenSTA, and diff the pip and BEL
+  # delays. The liberty and techmaps are vendored under Test/pdk so no PDK
+  # download is needed; the setup step requires yosys and sta, so the test
+  # skips where they are not installed.
+  - name: "diff_2.2_timing_structural_verilog"
+    path: "./2.2/feature/demo_timing_structural_verilog/"
+    language: "verilog"
+    test_mode: "diff"
+    description: "Diff the structural timing model (pips.txt, bel.v3.txt) on IHP SG13G2 (Verilog)"
+    # Without these the diff passes vacuously when neither side has the files.
+    expected_outputs:
+     - ".FABulous/pips.txt"
+     - ".FABulous/bel.v3.txt"
+    include_patterns:
+     - "pips.txt"
+     - "bel.v3.txt"
+    pre_fab_commands:
+      - cmd: "./write_timing_config.sh"
+        cwd: "Test/"
+        required_tools:
+          - "yosys"
+          - "sta"
+    fab_commands:
+      - "load_fabric"
+      - "run_fab"
+      - "timing_model --mode structural --with-config-file .FABulous/timing_model_config.json"
+
   - name: "run_user_flow_verilog"
     path: "./legacy/sim/demo_verilog/"
     language: "verilog"
