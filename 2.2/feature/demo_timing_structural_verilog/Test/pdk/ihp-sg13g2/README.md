@@ -1,0 +1,1 @@
+Unmodified subset of the IHP SG13G2 open PDK (https://github.com/IHP-GmbH/IHP-Open-PDK, commit 89d42ee6d2fd9b50b86a1aada6fee6673c3e6008, as installed by ciel), Apache-2.0 (see `LICENSE`); it lives under `Test/` because the timing flow reads every other `.v` file in the project as design RTL.
