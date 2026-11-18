@@ -6,23 +6,23 @@ module eFPGA_Config #(
     parameter integer FrameBitsPerRow = 32,
     parameter integer desync_flag = 20
 ) (
-    input CLK,
-    input resetn,
+    input wire CLK,
+    input wire reset_n,
     // UART configuration port
-    input Rx,
-    output ComActive,
-    output ReceiveLED,
+    input wire Rx,
+    output wire ComActive,
+    output wire ReceiveLED,
     // BitBang configuration port
-    input s_clk,
-    input s_data,
+    input wire s_clk,
+    input wire s_data,
     // Parallel configuration port
-    input [31:0] SelfWriteData,
-    input SelfWriteStrobe,
-    output [31:0] ConfigWriteData,
-    output ConfigWriteStrobe,
-    output [FrameBitsPerRow-1:0] FrameAddressRegister,
-    output LongFrameStrobe,
-    output [RowSelectWidth-1:0] RowSelect
+    input wire [31:0] SelfWriteData,
+    input wire SelfWriteStrobe,
+    output wire [31:0] ConfigWriteData,
+    output wire ConfigWriteStrobe,
+    output wire [FrameBitsPerRow-1:0] FrameAddressRegister,
+    output wire LongFrameStrobe,
+    output wire [RowSelectWidth-1:0] RowSelect
 );
 
     wire [7:0] Command;
@@ -43,7 +43,7 @@ module eFPGA_Config #(
 
     config_UART INST_config_UART (
         .CLK(CLK),
-        .reset_n(resetn),
+        .reset_n(reset_n),
         .Rx(Rx),
         .WriteData(UART_WriteData),
         .ComActive(UART_ComActive),
@@ -60,7 +60,7 @@ module eFPGA_Config #(
         .data(BitBangWriteData),
         .active(BitBangActive),
         .clk(CLK),
-        .reset_n(resetn)
+        .reset_n(reset_n)
     );
 
     // Configuration port priority (highest to lowest): UART > BitBang > Parallel
@@ -86,7 +86,7 @@ module eFPGA_Config #(
         .desync_flag(desync_flag)
     ) ConfigFSM_inst (
         .CLK(CLK),
-        .reset_n(resetn),
+        .reset_n(reset_n),
         .write_data(UART_WriteData_Mux),
         .write_strobe(UART_WriteStrobe_Mux),
         .fsm_reset(fsm_reset),
@@ -96,4 +96,4 @@ module eFPGA_Config #(
     );
 
 endmodule
-`default_nettype wire
+`resetall
