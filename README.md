@@ -16,7 +16,8 @@ The demos are also used for testing FABulous.
 | `legacy/sim/` | Full user-flow projects: fabric gen → synthesis → P&R → simulation |
 | `2.0/ref/` | FABulous 2.0 reference outputs for regression diffing (compiled with beta 4) |
 | `2.2/ref/` | FABulous 2.2.0 reference outputs for regression diffing |
-| `2.2/feature/` | Feature references (DSP supertile): diff + simulate a design on every DSP block (`make sim` in `Test/`) |
+| `2.2/feature/demo_DSP_top_*` | Feature references (DSP supertile): diff + simulate a design on every DSP block (`make sim` in `Test/`) |
+| `2.2/feature/demo_timing_structural_verilog/` | Structural timing model reference: diff `pips.txt` and `bel.v3.txt` on IHP SG13G2 (needs `yosys` and `sta`, skipped otherwise) |
 
 ## Running tests locally
 
