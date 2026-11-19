@@ -140,6 +140,46 @@ reference_projects:
      # Holds absolute source paths of the machine that generated it.
      - "eFPGA_geometry.csv"
 
+  - name: "diff_2.2.0.post_upgrade_verilog_reference_sim"
+    path: "./2.2/ref/demo_2.2.0_verilog/"
+    language: "verilog"
+    test_mode: "diff"
+    description: "Upgrade the FABulous 2.2.0 Verilog project, then diff it and run make sim"
+    upgrade: true
+    include_patterns:
+     - "*.csv"
+     - "*.txt"
+    exclude_patterns:
+     - "eFPGA_geometry.csv"
+     - "ram_regfile.txt"
+    post_fab_commands:
+      - cmd: "make sim"
+        cwd: "Test/"
+        required_tools:
+          - "yosys"
+          - "nextpnr-generic"
+          - "iverilog"
+
+  - name: "diff_2.2.0.post_upgrade_vhdl_reference_sim"
+    path: "./2.2/ref/demo_2.2.0_vhdl/"
+    language: "vhdl"
+    test_mode: "diff"
+    description: "Upgrade the FABulous 2.2.0 VHDL project, then diff it and run make sim"
+    upgrade: true
+    include_patterns:
+     - "*.csv"
+     - "*.txt"
+    exclude_patterns:
+     - "eFPGA_geometry.csv"
+     - "ram_regfile.txt"
+    post_fab_commands:
+      - cmd: "make sim"
+        cwd: "Test/"
+        required_tools:
+          - "yosys"
+          - "nextpnr-generic"
+          - "ghdl"
+
   # DSP_top_sm supertile fabric: diff generated outputs against the reference,
   # then synth + P&R a design onto all 7 MULADD blocks and check them in simulation.
   - name: "diff_2.2_dsp_top_verilog_reference_sim"

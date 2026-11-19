@@ -3,6 +3,21 @@ FAB_PROJ_ROOT=..
 BUILD_DIR=build
 YOSYS?=$(or $(FAB_YOSYS_PATH),yosys)
 NEXTPNR?=$(or $(FAB_NEXTPNR_PATH),nextpnr-generic)
+YOSYS_LIB_DIR=${FAB_PROJ_ROOT}/yosys
+SYNTH_LIB_OPTS=-extra-plib ${YOSYS_LIB_DIR}/primitives/prims.v \
+    -cells-map ${YOSYS_LIB_DIR}/techmap/cells_map.v \
+    -arith-map ${YOSYS_LIB_DIR}/techmap/arith_map.v \
+    -extra-map ${YOSYS_LIB_DIR}/techmap/ff_map.v \
+    -extra-map ${YOSYS_LIB_DIR}/techmap/latches_map.v \
+    -extra-map ${YOSYS_LIB_DIR}/techmap/io_map.v \
+    -extra-mlibmap ${YOSYS_LIB_DIR}/memlib/ram_regfile.txt \
+    -extra-map ${YOSYS_LIB_DIR}/techmap/regfile_map.v \
+    -ff \$$_DFF_P_ 0 -ff \$$_DLATCH_?_ x -latches warn
+checked_yosys_probe=$(if $(findstring FAB_YOSYS_PROBE_FAILED,$1),$(error ${YOSYS} -p "help synth_fabulous" failed),$1)
+SYNTH_LIB_ARGS=$(call checked_yosys_probe,$(shell \
+    if ! help=$$(${YOSYS} -p "help synth_fabulous"); then echo FAB_YOSYS_PROBE_FAILED; \
+    elif printf '%s\n' "$$help" | grep -q -- -cells-map; then printf '%s\n' '${SYNTH_LIB_OPTS}'; \
+    else echo "WARNING: Yosys 0.66 and older is deprecated; support ends in FABulous 3.0." >&2; echo -iopad; fi))
 DESIGN=sequential_16bit_en
 TESTBENCH=sequential_16bit_en_tb
 TESTBENCH_FILE=${TESTBENCH}.vhdl
@@ -30,7 +45,7 @@ sim: build_test_design run_simulation clean
 build_test_design: run_yosys run_nextpnr run_bitgen
 
 run_yosys: mkdir_build
-	${YOSYS} -m ghdl -p "ghdl ${USER_DESIGN_VHDL} -e ${DESIGN}; read_verilog ${TOP_WRAPPER_VERILOG}; synth_fabulous -top ${TOP_WRAPPER} -json ${BUILD_DIR}/${DESIGN}.json ${CUSTOM_PRIMS};"
+	${YOSYS} -m ghdl -p "ghdl ${USER_DESIGN_VHDL} -e ${DESIGN}; read_verilog ${TOP_WRAPPER_VERILOG}; synth_fabulous -top ${TOP_WRAPPER} -json ${BUILD_DIR}/${DESIGN}.json ${SYNTH_LIB_ARGS} ${CUSTOM_PRIMS};"
 
 run_nextpnr: mkdir_build
 	FAB_ROOT=${FAB_PROJ_ROOT} ${NEXTPNR} --uarch fabulous --json ${BUILD_DIR}/${DESIGN}.json -o fasm=${BUILD_DIR}/${DESIGN}.fasm
